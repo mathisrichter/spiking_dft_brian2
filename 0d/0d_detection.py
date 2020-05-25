@@ -34,7 +34,7 @@ G1.v = v_rest
 
 
 # input
-input_strength = 3000.0
+input_strength = 500.0
 PG = PoissonGroup(N, 'input_strength * Hz')
 SP = Synapses(PG, G, on_pre='s+=1.0*mV')
 SP.connect(j='i')
@@ -54,9 +54,22 @@ MR1 = PopulationRateMonitor(G1)
 # simulation
 runtime = 2*second
 
-run(runtime/2.)
+input_strength = 500.
+run(runtime/8.)
+input_strength = 1000.
+run(runtime/8.)
+input_strength = 1500.
+run(runtime/8.)
+input_strength = 2000.
+run(runtime/8.)
+input_strength = 1500.
+run(runtime/8.)
+input_strength = 1000.
+run(runtime/8.)
+input_strength = 500.
+run(runtime/8.)
 input_strength = 0.
-run(runtime/2.)
+run(runtime/8.)
 
 
 # plotting
