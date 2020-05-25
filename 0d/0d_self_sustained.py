@@ -23,6 +23,7 @@ reset_eqs = '''
     '''
 G = NeuronGroup(N, eqs, threshold='v>firing_threshold', reset=reset_eqs, refractory=refractory_period, method='exact')
 G.v = v_rest
+G.s = 0.0 * mV
 
 S = Synapses(G, G, 'w : volt', delay=3*ms, on_pre='s += 1.0 * mV')
 S.connect(condition='j!=i')
@@ -31,6 +32,7 @@ S.connect(condition='j!=i')
 # 0-dimensional neural node (without self-excitation)
 G1 = NeuronGroup(N, eqs, threshold='v>firing_threshold', reset=reset_eqs, refractory=refractory_period, method='exact')
 G1.v = v_rest
+G1.s = 0.0 * mV
 
 
 # input
