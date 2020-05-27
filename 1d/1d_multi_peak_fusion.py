@@ -61,17 +61,24 @@ MS = StateMonitor(G, variables='v', record=True)
 MR = PopulationRateMonitor(G)
 MR1 = PopulationRateMonitor(G1)
 
+net = Network(collect())  # automatically include the above monitors
+
+l = 2 # number of neurons in a subgroup
+number_of_subgroups = math.floor(N/l)
+pop_rate_monitors = [ PopulationRateMonitor(G[n*l:(n*l)+l]) for n in range(0, number_of_subgroups) ]
+net.add(pop_rate_monitors) # manually add these monitors (they are not automatically added because they are in a list
+
 
 # simulation
 runtime = 2*second
 
-run(runtime/3.)
+net.run(runtime/3.)
 input_center1 = 50.
 input_center2 = 90.
-run(runtime/3.)
+net.run(runtime/3.)
 input_center1 = 62.
 input_center2 = 78.
-run(runtime/3.)
+net.run(runtime/3.)
 
 
 # plotting
@@ -105,6 +112,16 @@ plot(MR.t/ms, MR.smooth_rate(width=50*ms), 'k', label='interaction')
 plot(MR1.t/ms, MR1.smooth_rate(width=50*ms), 'r', label='no interaction')
 xlabel('Time (ms)')
 ylabel('Firing rate (spikes/s)')
+legend()
+
+
+figure()
+suptitle('Spike rate of the field (Hz)')
+pop_spikerates = np.vstack([np.array(monitor.smooth_rate(width=50*ms)) for monitor in pop_rate_monitors])
+im = pcolormesh(pop_spikerates)
+colorbar(im)
+xlabel('Time (ms)')
+ylabel('Neuron index')
 legend()
 
 figure()
