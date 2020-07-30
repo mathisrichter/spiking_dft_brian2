@@ -1,0 +1,102 @@
+General questions
+----------------
+- how do DFT concepts translate to spiking dynamics?
+  * attractor
+  * repellor
+  * bistability
+  * instability
+
+- parameter constraints for dynamic regimes
+  * number of neurons
+  * resting level
+  * spiking threshold
+  * synaptic strength (this and above are all interdependent)
+  * time scales
+  * spike rates!
+
+- synchronization of firing
+  * within recurrent population
+  * across populations connected along a chain
+
+- (refactoring the code)
+  * creating plotting functions
+  * centralized standard parameters that may be overwritten
+
+
+0D
+----------------
+- detection, hysteresis             WORKING
+- self-sustained                    WORKING
+
+
+1D
+----------------
+- multi peak                        WORKING
+- multi peak, peak fusion           WORKING
+- selection, hysteresis             WORKING
+- sustained, peak repulsion         WORKING
+- sustained, multi peak
+- sustained, selection              WORKING
+- sustained, tracking               WORKING
+
+
+2D
+----------------
+! time course plot (maybe projected to 1D?)
+- multi peak
+- multi peak, peak fusion
+- selection, hysteresis
+- sustained, peak repulsion
+- sustained, multi peak
+- sustained, selection
+- sustained, tracking
+
+
+3D (maybe only multiple 2D slices?)
+----------------
+! time course plot (use 2D plots?)
+- multi peak
+- multi peak, peak fusion
+- selection, hysteresis
+- sustained, peak repulsion
+- sustained, multi peak
+- sustained, selection
+- sustained, tracking
+
+
+COUPLING
+----------------
+- 0D to 1D, boost, biased           WORKING
+- 0D to 1D, patterned, concept      WORKING
+- 0D to 2D, boost, biased
+- 0D to 2D, patterned, concept
+- 0D to 3D, boost, biased
+- 0D to 3D, patterned, concept
+- 1D to 0D, peak detector           WORKING
+- 1D to 0D, patterned, concept      WORKING
+- 1D to 1D                          WORKING
+- 1D to 2D, ridge
+- 1D to 3D, sheet
+- 2D to 0D, peak detector
+- 2D to 0D, patterned, concept
+- 2D to 1D, marginalizing (avg?)
+- 2D to 2D
+- 2D to 3D, cylinder
+- 3D to 0D, peak detector
+- 3D to 0D, patterned, concept
+- 3D to 1D, marginalizing (avg?)
+- 3D to 2D, marginalizing (avg?)
+- 3D to 3D
+
+
+TRANSFORMS
+----------------
+- 1D input, 2D transform
+- 2D input, 4D transform
+
+
+MEMORY TRACE
+----------------
+- 1D
+- 2D
+- 3D
