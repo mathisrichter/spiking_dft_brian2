@@ -34,8 +34,7 @@ General questions
 - multi peak                        WORKING
 - multi peak, peak fusion           WORKING
 - selection, hysteresis             WORKING
-- sustained, peak repulsion         WORKING
-- sustained, multi peak
+- sustained, multi peak, repulsion  WORKING
 - sustained, selection              WORKING
 - sustained, tracking               WORKING
 
@@ -46,8 +45,7 @@ General questions
 - multi peak
 - multi peak, peak fusion
 - selection, hysteresis
-- sustained, peak repulsion
-- sustained, multi peak
+- sustained, multi peak, repulsion
 - sustained, selection
 - sustained, tracking
 
@@ -58,18 +56,20 @@ General questions
 - multi peak
 - multi peak, peak fusion
 - selection, hysteresis
-- sustained, peak repulsion
-- sustained, multi peak
+- sustained, multi peak, repulsion
 - sustained, selection
 - sustained, tracking
 
 
 COUPLING
 ----------------
+- 0D to 1D, boost                   WORKING
 - 0D to 1D, boost, biased           WORKING
 - 0D to 1D, patterned, concept      WORKING
+- 0D to 2D, boost
 - 0D to 2D, boost, biased
 - 0D to 2D, patterned, concept
+- 0D to 3D, boost
 - 0D to 3D, boost, biased
 - 0D to 3D, patterned, concept
 - 1D to 0D, peak detector           WORKING
