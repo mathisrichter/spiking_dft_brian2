@@ -32,7 +32,7 @@ General questions
 1D
 ----------------
 - multi peak                        WORKING
-- multi peak, peak fusion           WORKING
+- multi peak, peak fusion           NO FUSION!
 - selection, hysteresis             WORKING
 - sustained, multi peak, repulsion  WORKING
 - sustained, selection              WORKING
